@@ -933,7 +933,7 @@ function getScrollbarWidth() {
         return 0
     }
 
-    var $outer = $( '<div style="visibility:hidden;width:100px" />' ).
+    var $outer = $( '<div id="date-time-picker-div" />' ).
         appendTo( 'body' )
 
     // Get the width without scrollbars.
@@ -943,7 +943,7 @@ function getScrollbarWidth() {
     $outer.css( 'overflow', 'scroll' )
 
     // Add the inner div.
-    var $inner = $( '<div style="width:100%" />' ).appendTo( $outer )
+    var $inner = $( '<div id="date-time-picker-div-inner" />' ).appendTo( $outer )
 
     // Get the width with scrollbars.
     var widthWithScroll = $inner[0].offsetWidth
@@ -1158,6 +1158,3 @@ return PickerConstructor
 
 
 }));
-
-
-
